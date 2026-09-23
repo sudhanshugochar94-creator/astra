@@ -79,8 +79,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       id="main-app-header"
       className={`sticky top-0 z-40 w-full transition-all duration-200 border-b ${
         isScrolled
-          ? 'bg-[#FAF7F2]/95 dark:bg-[#111A15]/95 backdrop-blur-md border-[#1C382B]/12 dark:border-white/10 shadow-xs py-2'
-          : 'bg-[#FAF7F2] dark:bg-[#111A15] border-[#1C382B]/08 dark:border-white/06 py-3'
+          ? 'bg-[#E4E4E4]/95 dark:bg-[#0B1927]/95 backdrop-blur-md border-[#B1B1B1] dark:border-[#767575] shadow-xs py-2'
+          : 'bg-[#E4E4E4] dark:bg-[#0B1927] border-[#B1B1B1]/60 dark:border-[#767575]/60 py-3'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
@@ -88,7 +88,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Brand Logo with clinical/cultural tag */}
         <div className="flex items-center gap-3">
           <VanikaLogo onClick={() => handleNavClick('home')} size="sm" />
-          <span className="hidden xl:inline-block text-[11px] font-semibold text-[#4F5E57] dark:text-[#9DB0A7] border-l border-[#1C382B]/15 dark:border-white/15 pl-3">
+          <span className="hidden xl:inline-block text-[11px] font-bold text-[#767575] dark:text-[#C5D8D1] border-l border-[#B1B1B1] dark:border-[#767575] pl-3">
             Cognitive Care • NE India
           </span>
         </div>
@@ -96,7 +96,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* ===== CENTER: Segmented Mode Controller ===== */}
         <nav 
           aria-label="Primary View Modes"
-          className="hidden md:flex items-center bg-[#F3ECE2] dark:bg-[#1A2620] rounded-xl p-1 border border-[#1C382B]/10 dark:border-white/10"
+          className="hidden md:flex items-center bg-[#C5D8D1]/40 dark:bg-[#12263A] rounded-xl p-1 border border-[#B1B1B1]"
         >
           {/* Mode 1: Explore */}
           <button
@@ -104,11 +104,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => handleNavClick('home')}
             className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold tracking-tight transition-all duration-150 cursor-pointer ${
               isExplorMode
-                ? 'bg-[#1C382B] text-[#FAF7F2] shadow-xs'
-                : 'text-[#1C382B] dark:text-[#FAF7F2] hover:bg-white/60 dark:hover:bg-white/10'
+                ? 'bg-[#12263A] text-[#E4E4E4] shadow-xs'
+                : 'text-[#12263A] dark:text-[#E4E4E4] hover:bg-white/60 dark:hover:bg-white/10'
             }`}
           >
-            <Home className="w-3.5 h-3.5 text-[#C99738]" />
+            <Home className="w-3.5 h-3.5 text-[#697A21]" />
             <span>Overview</span>
           </button>
 
@@ -118,8 +118,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => handleNavClick('patient-app')}
             className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold tracking-tight transition-all duration-150 cursor-pointer ${
               isElderMode
-                ? 'bg-[#C99738] text-[#13271E] shadow-xs font-black'
-                : 'text-[#1C382B] dark:text-[#FAF7F2] hover:bg-white/60 dark:hover:bg-white/10'
+                ? 'bg-[#697A21] text-[#FFFFFF] shadow-xs font-black'
+                : 'text-[#12263A] dark:text-[#E4E4E4] hover:bg-white/60 dark:hover:bg-white/10'
             }`}
           >
             <span>👴🏽</span>
@@ -132,8 +132,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => handleNavClick('caregiver-portal')}
             className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold tracking-tight transition-all duration-150 cursor-pointer ${
               isCaregiverMode
-                ? 'bg-[#B3532D] text-white shadow-xs font-black'
-                : 'text-[#1C382B] dark:text-[#FAF7F2] hover:bg-white/60 dark:hover:bg-white/10'
+                ? 'bg-[#1D3A56] text-white shadow-xs font-black'
+                : 'text-[#12263A] dark:text-[#E4E4E4] hover:bg-white/60 dark:hover:bg-white/10'
             }`}
           >
             <Stethoscope className="w-3.5 h-3.5 text-white" />
@@ -148,8 +148,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => handleNavClick('games-hub')}
             className={`px-2.5 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-colors ${
               activeView === 'games-hub'
-                ? 'bg-[#1C382B]/10 dark:bg-white/15 text-[#1C382B] dark:text-white font-bold'
-                : 'text-[#4F5E57] dark:text-[#9DB0A7] hover:text-[#1C382B] dark:hover:text-white'
+                ? 'bg-[#12263A]/10 dark:bg-white/15 text-[#12263A] dark:text-white font-bold'
+                : 'text-[#767575] dark:text-[#B1B1B1] hover:text-[#12263A] dark:hover:text-white'
             }`}
           >
             Activities
@@ -159,8 +159,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => handleNavClick('daily-routine')}
             className={`px-2.5 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-colors ${
               activeView === 'daily-routine'
-                ? 'bg-[#1C382B]/10 dark:bg-white/15 text-[#1C382B] dark:text-white font-bold'
-                : 'text-[#4F5E57] dark:text-[#9DB0A7] hover:text-[#1C382B] dark:hover:text-white'
+                ? 'bg-[#12263A]/10 dark:bg-white/15 text-[#12263A] dark:text-white font-bold'
+                : 'text-[#767575] dark:text-[#B1B1B1] hover:text-[#12263A] dark:hover:text-white'
             }`}
           >
             Routine
@@ -170,14 +170,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => handleNavClick('progress')}
             className={`px-2.5 py-1.5 rounded-lg text-xs font-semibold cursor-pointer transition-colors ${
               activeView === 'progress'
-                ? 'bg-[#1C382B]/10 dark:bg-white/15 text-[#1C382B] dark:text-white font-bold'
-                : 'text-[#4F5E57] dark:text-[#9DB0A7] hover:text-[#1C382B] dark:hover:text-white'
+                ? 'bg-[#12263A]/10 dark:bg-white/15 text-[#12263A] dark:text-white font-bold'
+                : 'text-[#767575] dark:text-[#B1B1B1] hover:text-[#12263A] dark:hover:text-white'
             }`}
           >
             Analytics
           </button>
 
-          <div className="h-4 w-px bg-[#1C382B]/15 dark:bg-white/15 mx-1" />
+          <div className="h-4 w-px bg-[#B1B1B1] dark:bg-white/15 mx-1" />
 
           {/* Talk to Companion Button */}
           <button
@@ -186,11 +186,11 @@ export const Navbar: React.FC<NavbarProps> = ({
               soundSynth.playGentleChime();
               onOpenCompanion();
             }}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#1C382B] dark:bg-[#1A2620] hover:bg-[#2A4B3C] text-[#FAF7F2] font-semibold text-xs border border-[#C99738]/50 transition-colors shadow-xs cursor-pointer focus-accessible"
+            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#12263A] hover:bg-[#1D3A56] text-[#E4E4E4] font-bold text-xs border border-[#697A21] transition-colors shadow-sm cursor-pointer focus-accessible"
             title="Open Voice AI Companion"
           >
-            <span className="w-2 h-2 rounded-full bg-[#C99738] animate-status-pulse shrink-0" />
-            <Volume2 className="w-3.5 h-3.5 text-[#C99738]" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#697A21] animate-status-pulse shrink-0" />
+            <Volume2 className="w-4 h-4 text-[#C5D8D1]" />
             <span>Talk to Oja</span>
           </button>
 
@@ -202,12 +202,12 @@ export const Navbar: React.FC<NavbarProps> = ({
               if (onOpenNotifications) onOpenNotifications();
               else onNavigate('notifications');
             }}
-            className="p-2 rounded-lg bg-[#F3ECE2] dark:bg-[#1A2620] hover:bg-[#E6DCce] text-[#1C382B] dark:text-[#C99738] border border-[#1C382B]/10 dark:border-white/10 transition-colors cursor-pointer relative focus-accessible"
+            className="p-2 rounded-xl bg-[#FFFFFF] dark:bg-[#12263A] hover:bg-[#C5D8D1]/30 text-[#12263A] dark:text-[#C5D8D1] border border-[#B1B1B1] transition-colors cursor-pointer relative focus-accessible"
             title="Notifications & Routine Alerts"
             aria-label="View notifications"
           >
-            <Bell className="w-4 h-4" />
-            <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-[#B3532D]" />
+            <Bell className="w-4 h-4 text-[#697A21]" />
+            <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-[#697A21]" />
           </button>
 
           {/* User Profile / Auth Button */}
@@ -219,10 +219,10 @@ export const Navbar: React.FC<NavbarProps> = ({
                   soundSynth.playSoftClick();
                   onOpenProfile();
                 }}
-                className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white dark:bg-[#1E2D25] hover:bg-[#F3ECE2] text-[#1C382B] dark:text-[#FAF7F2] font-semibold text-xs border border-[#1C382B]/15 dark:border-white/15 transition-colors cursor-pointer focus-accessible shadow-xs"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-[#12263A] hover:bg-[#C5D8D1]/30 text-[#12263A] dark:text-[#E4E4E4] font-bold text-xs border border-[#B1B1B1] transition-colors cursor-pointer focus-accessible shadow-xs"
                 title="Caregiver & Elder Profile"
               >
-                <User className="w-3.5 h-3.5 text-[#4F5E57] dark:text-[#9DB0A7]" />
+                <User className="w-3.5 h-3.5 text-[#697A21]" />
                 <span className="truncate max-w-[100px]">{patientName.split(' ')[0]}</span>
               </button>
               <button
@@ -230,7 +230,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   soundSynth.playSoftClick();
                   auth.logout();
                 }}
-                className="p-1.5 rounded-lg text-[#4F5E57] dark:text-[#9DB0A7] hover:text-red-600 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors cursor-pointer"
+                className="p-1.5 rounded-lg text-[#767575] hover:text-red-700 hover:bg-red-50 transition-colors cursor-pointer"
                 title="Sign Out"
                 aria-label="Sign Out"
               >
@@ -244,7 +244,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 soundSynth.playSoftClick();
                 handleNavClick('login');
               }}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#C99738] hover:bg-[#DCAB4E] text-[#13271E] font-bold text-xs shadow-xs transition-colors cursor-pointer"
+              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#697A21] hover:bg-[#7E922A] text-white font-bold text-xs shadow-xs transition-colors cursor-pointer focus-accessible"
               title="Sign In or Register"
             >
               <LogIn className="w-3.5 h-3.5" />

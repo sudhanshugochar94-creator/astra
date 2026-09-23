@@ -74,10 +74,10 @@ export const REGIONAL_LANGUAGES: LanguageInfo[] = [
     nativeScript: 'English',
     region: 'All North Eastern Regions',
     greeting: 'Good morning, may peace and joy be with you today',
-    phoneticGreeting: 'Good morning, warm welcome to Vanika',
+    phoneticGreeting: 'WELCOME TO ASTRAA! Good morning, warm welcome to ASTRA',
     culturalEmblem: '🕊️ Courtyard & Hill Sunlight',
     description: 'Clear, compassionate voice assistance with gentle Indian pacing and familiar phrasing.',
-    audioSampleText: 'Good morning! Welcome to Vanika. Let us take a gentle breath and enjoy our memory courtyard.'
+    audioSampleText: 'WELCOME TO ASTRAA! Good morning! Welcome to ASTRA. Let us take a gentle breath and enjoy our memory courtyard.'
   }
 ];
 

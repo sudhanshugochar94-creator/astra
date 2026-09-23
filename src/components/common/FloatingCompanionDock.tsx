@@ -19,8 +19,8 @@ export const FloatingCompanionDock: React.FC<FloatingCompanionDockProps> = ({
       {/* 1. Desktop & Tablet Floating AI Companion Quick Button (Bottom Right) */}
       <div className="fixed bottom-6 right-6 z-40 hidden md:flex items-center gap-3 animate-bounce-subtle">
         {/* Quick Launch Tooltip Badge */}
-        <div className="bg-[#1E3A2F] text-[#FDFBF7] px-3.5 py-2 rounded-2xl text-xs font-bold shadow-lg border border-[#D4AF37]/30 flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+        <div className="bg-[#12263A] text-[#E4E4E4] px-4 py-2 rounded-2xl text-xs font-extrabold shadow-lg border border-[#697A21] flex items-center gap-2">
+          <div className="w-2.5 h-2.5 rounded-full bg-[#697A21] animate-pulse" />
           <span>Oja Companion Available</span>
         </div>
 
@@ -31,25 +31,25 @@ export const FloatingCompanionDock: React.FC<FloatingCompanionDockProps> = ({
             soundSynth.playGentleChime();
             onOpenCompanion();
           }}
-          className="group relative flex items-center justify-center p-3.5 rounded-full bg-gradient-to-r from-[#2D4739] to-[#1E3A2F] text-[#FDFBF7] shadow-2xl hover:scale-105 active:scale-95 transition-all border-2 border-[#D4AF37] cursor-pointer focus-accessible"
+          className="group relative flex items-center justify-center p-3.5 rounded-full bg-gradient-to-r from-[#12263A] to-[#1D3A56] text-[#E4E4E4] shadow-2xl hover:scale-105 active:scale-95 transition-all border-2 border-[#697A21] cursor-pointer focus-accessible"
           title="Talk to Oja — AI Elder Voice Companion"
           aria-label="Open AI Elder Companion Voice Chat"
         >
           {/* Animated Pulsing Halo */}
-          <div className="absolute -inset-1 rounded-full bg-[#D4AF37]/30 animate-ping pointer-events-none" />
+          <div className="absolute -inset-1 rounded-full bg-[#697A21]/30 animate-ping pointer-events-none" />
           
           <div className="flex items-center gap-2 relative z-10 px-2 py-1">
             <span className="text-3xl filter drop-shadow-xs">👵🏽</span>
             <div className="text-left pr-1">
-              <span className="block font-heading font-extrabold text-xs text-[#D4AF37] leading-none uppercase tracking-wider">
+              <span className="block font-heading font-extrabold text-xs text-[#C5D8D1] leading-none uppercase tracking-wider">
                 Voice AI
               </span>
-              <span className="block font-bold text-sm text-[#FDFBF7] leading-tight">
+              <span className="block font-bold text-sm text-[#E4E4E4] leading-tight">
                 Talk to Oja
               </span>
             </div>
-            <div className="w-7 h-7 rounded-full bg-[#D4AF37] text-[#1E3A2F] flex items-center justify-center font-bold">
-              <Mic className="w-4 h-4 text-[#1E3A2F]" />
+            <div className="w-8 h-8 rounded-full bg-[#697A21] text-white flex items-center justify-center font-bold">
+              <Mic className="w-4 h-4 text-white" />
             </div>
           </div>
         </button>
@@ -58,7 +58,7 @@ export const FloatingCompanionDock: React.FC<FloatingCompanionDockProps> = ({
       {/* 2. Mobile Bottom Quick Touch Navigation Bar (Always Visible on Small Screens) */}
       <nav
         id="mobile-bottom-quick-bar"
-        className="fixed bottom-0 inset-x-0 z-40 bg-[#1E3A2F] text-[#FDFBF7] border-t border-[#D4AF37]/30 px-3 py-2 flex md:hidden items-center justify-around shadow-2xl backdrop-blur-md"
+        className="fixed bottom-0 inset-x-0 z-40 bg-[#12263A] text-[#E4E4E4] border-t border-[#697A21] px-3 py-2 flex md:hidden items-center justify-around shadow-2xl backdrop-blur-md"
         aria-label="Mobile Navigation Quick Bar"
       >
         {/* Courtyard */}
@@ -68,10 +68,10 @@ export const FloatingCompanionDock: React.FC<FloatingCompanionDockProps> = ({
             onNavigate('patient-app');
           }}
           className={`flex flex-col items-center gap-1 p-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-            activeView === 'patient-app' ? 'text-[#D4AF37] bg-[#2D4739]' : 'text-[#EAE2D2]'
+            activeView === 'patient-app' ? 'text-[#C5D8D1] bg-[#1D3A56]' : 'text-[#E4E4E4]'
           }`}
         >
-          <Heart className="w-5 h-5 text-[#D4AF37]" />
+          <Heart className="w-5 h-5 text-[#697A21]" />
           <span>Courtyard</span>
         </button>
 
@@ -82,10 +82,10 @@ export const FloatingCompanionDock: React.FC<FloatingCompanionDockProps> = ({
             onNavigate('game-memory');
           }}
           className={`flex flex-col items-center gap-1 p-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-            activeView.startsWith('game-') ? 'text-[#D4AF37] bg-[#2D4739]' : 'text-[#EAE2D2]'
+            activeView.startsWith('game-') ? 'text-[#C5D8D1] bg-[#1D3A56]' : 'text-[#E4E4E4]'
           }`}
         >
-          <Sparkles className="w-5 h-5 text-[#D4AF37]" />
+          <Sparkles className="w-5 h-5 text-[#697A21]" />
           <span>Games</span>
         </button>
 
@@ -95,7 +95,7 @@ export const FloatingCompanionDock: React.FC<FloatingCompanionDockProps> = ({
             soundSynth.playGentleChime();
             onOpenCompanion();
           }}
-          className="flex flex-col items-center justify-center -mt-6 p-3 rounded-full bg-[#D4AF37] text-[#1E3A2F] shadow-xl border-2 border-white cursor-pointer active:scale-95 transition-transform"
+          className="flex flex-col items-center justify-center -mt-6 p-3 rounded-full bg-[#697A21] text-white shadow-xl border-2 border-white cursor-pointer active:scale-95 transition-transform"
           aria-label="Talk to Oja AI Companion"
         >
           <span className="text-2xl">👵🏽</span>
@@ -108,10 +108,10 @@ export const FloatingCompanionDock: React.FC<FloatingCompanionDockProps> = ({
             onNavigate('caregiver-portal');
           }}
           className={`flex flex-col items-center gap-1 p-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-            activeView === 'caregiver-portal' || activeView === 'caregiver' ? 'text-[#D4AF37] bg-[#2D4739]' : 'text-[#EAE2D2]'
+            activeView === 'caregiver-portal' || activeView === 'caregiver' ? 'text-[#C5D8D1] bg-[#1D3A56]' : 'text-[#E4E4E4]'
           }`}
         >
-          <Activity className="w-5 h-5 text-[#D4AF37]" />
+          <Activity className="w-5 h-5 text-[#697A21]" />
           <span>Caregiver</span>
         </button>
 
@@ -122,10 +122,10 @@ export const FloatingCompanionDock: React.FC<FloatingCompanionDockProps> = ({
             onNavigate('culture');
           }}
           className={`flex flex-col items-center gap-1 p-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-            activeView === 'culture' ? 'text-[#D4AF37] bg-[#2D4739]' : 'text-[#EAE2D2]'
+            activeView === 'culture' ? 'text-[#C5D8D1] bg-[#1D3A56]' : 'text-[#E4E4E4]'
           }`}
         >
-          <BookOpen className="w-5 h-5 text-[#D4AF37]" />
+          <BookOpen className="w-5 h-5 text-[#697A21]" />
           <span>NER Roots</span>
         </button>
       </nav>

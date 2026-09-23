@@ -24,7 +24,7 @@ export const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <footer id="main-footer" className="bg-[#13271E] text-[#FAF7F2] relative pt-12 pb-8 border-t border-[#C99738]/20">
+    <footer id="main-footer" className="bg-[#12263A] text-[#E4E4E4] relative pt-12 pb-8 border-t border-[#697A21]">
       {/* Cultural border line */}
       <CulturalPatternBorder variant="gamusa" inverted className="mb-8 opacity-80" />
 
@@ -35,14 +35,14 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="lg:col-span-2 space-y-4">
             <VanikaLogo onClick={() => handleNav('home')} />
 
-            <p className="text-xs sm:text-sm text-[#D1DCD6] leading-relaxed max-w-md font-normal">
+            <p className="text-xs sm:text-sm text-[#C5D8D1] leading-relaxed max-w-md font-normal">
               A calm digital community courtyard providing culturally grounded, voice-first cognitive care and memory assistance for elderly individuals and family caregivers across North-East India.
             </p>
 
-            <div className="p-3 rounded-lg bg-white/06 border border-white/10 max-w-md flex items-start gap-3">
-              <Phone className="w-4 h-4 text-[#C99738] shrink-0 mt-0.5" />
-              <div className="text-xs text-[#FAF7F2]">
-                <strong className="text-[#C99738] block mb-0.5">Community & ASHA Alignment</strong>
+            <div className="p-3 rounded-xl bg-white/06 border border-[#697A21]/50 max-w-md flex items-start gap-3">
+              <Phone className="w-4 h-4 text-[#697A21] shrink-0 mt-0.5" />
+              <div className="text-xs text-[#E4E4E4]">
+                <strong className="text-[#C5D8D1] block mb-0.5">Community & ASHA Alignment</strong>
                 Designed for field integration with community health workers, local village dialects, and family elders.
               </div>
             </div>
@@ -50,14 +50,14 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Col 2: Core Experience */}
           <div>
-            <h4 className="text-xs font-bold text-[#C99738] uppercase tracking-wider mb-3.5 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5" /> Core Activities
+            <h4 className="text-xs font-bold text-[#C5D8D1] uppercase tracking-wider mb-3.5 flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-[#697A21]" /> Core Activities
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
                 <button
                   onClick={() => handleNav('patient-app')}
-                  className="text-[#D1DCD6] hover:text-[#C99738] transition-colors cursor-pointer text-left"
+                  className="text-[#E4E4E4] hover:text-[#C5D8D1] transition-colors cursor-pointer text-left"
                 >
                   Elder Courtyard
                 </button>
@@ -65,7 +65,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => handleNav('memory-house')}
-                  className="text-[#D1DCD6] hover:text-[#C99738] transition-colors cursor-pointer text-left"
+                  className="text-[#E4E4E4] hover:text-[#C5D8D1] transition-colors cursor-pointer text-left"
                 >
                   Memory House (Courtyard Rooms)
                 </button>
@@ -73,7 +73,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => handleNav('memory-garden')}
-                  className="text-[#D1DCD6] hover:text-[#C99738] transition-colors cursor-pointer text-left"
+                  className="text-[#E4E4E4] hover:text-[#C5D8D1] transition-colors cursor-pointer text-left"
                 >
                   Memory Garden Sanctuary
                 </button>
@@ -81,7 +81,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => handleNav('game-memory')}
-                  className="text-[#D1DCD6] hover:text-[#C99738] transition-colors cursor-pointer text-left"
+                  className="text-[#E4E4E4] hover:text-[#C5D8D1] transition-colors cursor-pointer text-left"
                 >
                   Photo Recall & Cherished Faces
                 </button>
@@ -89,7 +89,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => handleNav('game-sequence')}
-                  className="text-[#D1DCD6] hover:text-[#C99738] transition-colors cursor-pointer text-left"
+                  className="text-[#E4E4E4] hover:text-[#C5D8D1] transition-colors cursor-pointer text-left"
                 >
                   Bihu & Routine Sequencing
                 </button>
@@ -99,14 +99,14 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Col 3: Caregiver & Trust */}
           <div>
-            <h4 className="text-xs font-bold text-[#C99738] uppercase tracking-wider mb-3.5 flex items-center gap-1.5">
-              <Shield className="w-3.5 h-3.5" /> Clinical & Caregivers
+            <h4 className="text-xs font-bold text-[#C5D8D1] uppercase tracking-wider mb-3.5 flex items-center gap-1.5">
+              <Shield className="w-3.5 h-3.5 text-[#697A21]" /> Clinical & Caregivers
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
                 <button
                   onClick={() => handleNav('caregiver-portal')}
-                  className="text-[#D1DCD6] hover:text-[#C99738] transition-colors cursor-pointer text-left"
+                  className="text-[#E4E4E4] hover:text-[#C5D8D1] transition-colors cursor-pointer text-left"
                 >
                   Cognitive Trends Dashboard
                 </button>
@@ -114,7 +114,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => handleNav('privacy')}
-                  className="text-[#D1DCD6] hover:text-[#C99738] transition-colors cursor-pointer text-left"
+                  className="text-[#E4E4E4] hover:text-[#C5D8D1] transition-colors cursor-pointer text-left"
                 >
                   Local-First Encryption (DPDP)
                 </button>
@@ -122,7 +122,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => handleNav('how-it-works')}
-                  className="text-[#D1DCD6] hover:text-[#C99738] transition-colors cursor-pointer text-left"
+                  className="text-[#E4E4E4] hover:text-[#C5D8D1] transition-colors cursor-pointer text-left"
                 >
                   How Vanika Works
                 </button>
@@ -130,7 +130,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => handleNav('daily-routine')}
-                  className="text-[#D1DCD6] hover:text-[#C99738] transition-colors cursor-pointer text-left"
+                  className="text-[#E4E4E4] hover:text-[#C5D8D1] transition-colors cursor-pointer text-left"
                 >
                   Daily Routine Timeline
                 </button>
@@ -138,7 +138,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => handleNav('progress')}
-                  className="text-[#D1DCD6] hover:text-[#C99738] transition-colors cursor-pointer text-left"
+                  className="text-[#E4E4E4] hover:text-[#C5D8D1] transition-colors cursor-pointer text-left"
                 >
                   Longitudinal Analytics
                 </button>
@@ -148,8 +148,8 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Col 4: Regional Dialects */}
           <div>
-            <h4 className="text-xs font-bold text-[#C99738] uppercase tracking-wider mb-3.5 flex items-center gap-1.5">
-              <Globe className="w-3.5 h-3.5" /> NER Dialects
+            <h4 className="text-xs font-bold text-[#C5D8D1] uppercase tracking-wider mb-3.5 flex items-center gap-1.5">
+              <Globe className="w-3.5 h-3.5 text-[#697A21]" /> NER Dialects
             </h4>
             <div className="flex flex-col gap-1">
               {REGIONAL_LANGUAGES.map((lang) => (
@@ -159,10 +159,10 @@ export const Footer: React.FC<FooterProps> = ({
                     soundSynth.playSoftClick();
                     if (onSelectLanguage) onSelectLanguage(lang.id);
                   }}
-                  className={`text-left px-2 py-1 rounded text-xs transition-colors flex items-center justify-between cursor-pointer ${
+                  className={`text-left px-2.5 py-1.5 rounded-lg text-xs transition-colors flex items-center justify-between cursor-pointer ${
                     currentLanguage === lang.id
-                      ? 'bg-[#C99738] text-[#13271E] font-bold'
-                      : 'text-[#D1DCD6] hover:bg-white/06'
+                      ? 'bg-[#697A21] text-white font-bold'
+                      : 'text-[#E4E4E4] hover:bg-white/06'
                   }`}
                 >
                   <span>{lang.nativeScript}</span>
@@ -174,12 +174,12 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
 
         {/* Institutional copyright and safe ethics statement */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#D1DCD6] gap-3 text-center sm:text-left">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#C5D8D1] gap-3 text-center sm:text-left">
           <p>
             © 2026 Vanika (SIH 2026). Handcrafted with reverence for the elders and families of North-East India.
           </p>
           <div className="flex items-center gap-3 text-xs">
-            <span className="flex items-center gap-1 text-[#C99738]">
+            <span className="flex items-center gap-1 text-[#697A21]">
               <Heart className="w-3.5 h-3.5 fill-current" /> Non-Stigmatizing Metaphors
             </span>
             <span>•</span>

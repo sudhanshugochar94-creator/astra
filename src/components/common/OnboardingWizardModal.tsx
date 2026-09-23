@@ -295,7 +295,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
                 <span className="text-xs text-[#D4AF37] font-bold">DPDP Act 2023 Compliant</span>
               </div>
               <h2 className="font-heading font-extrabold text-base sm:text-lg text-[#FDFBF7]">
-                Vanika Personalized Onboarding & Care Calibration
+                ASTRA Personalized Onboarding & Care Calibration
               </h2>
             </div>
           </div>
@@ -827,7 +827,7 @@ export const OnboardingWizardModal: React.FC<OnboardingWizardModalProps> = ({
                   Onboarding Complete & Vault Encrypted!
                 </h3>
                 <p className="text-xs sm:text-sm text-[#52635D] dark:text-[#EAE2D2] mt-1 max-w-md mx-auto">
-                  {name} has been enrolled into Vanika's personalized cognitive sanctuary.
+                  {name} has been enrolled into ASTRA's personalized cognitive sanctuary.
                 </p>
               </div>
 

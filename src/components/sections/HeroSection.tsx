@@ -26,7 +26,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     soundSynth.playGentleChime();
     setIsPlayingAudio(true);
     await VoiceAssistant.speak(
-      "Namaskar and warm welcome to Vanika. Here in our digital community courtyard, you can remember cherished moments, play gentle games, and talk with a wise elder companion.",
+      "WELCOME TO ASTRAA! Namaskar and warm welcome to ASTRA. Here in our digital community courtyard, you can remember cherished moments, play gentle games, and talk with a wise elder companion.",
       currentLanguage as Language,
       'slow'
     );
@@ -36,25 +36,25 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id="section-hero"
-      className="relative bg-[#FAF7F2] dark:bg-[#111A15] pt-12 pb-16 sm:pb-20 border-b border-[#1C382B]/10 dark:border-white/10"
+      className="relative bg-[#E4E4E4] dark:bg-[#0B1927] pt-12 pb-16 sm:pb-20 border-b border-[#B1B1B1] dark:border-[#767575]"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* ── EDITORIAL HEADER ── */}
         <div className="text-center max-w-3xl mx-auto">
           {/* Institutional Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#1C382B]/06 dark:bg-white/10 border border-[#1C382B]/12 dark:border-white/15 text-[#1C382B] dark:text-[#FAF7F2] text-xs font-semibold tracking-wide mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#B3532D]" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#12263A]/10 dark:bg-white/10 border border-[#697A21]/40 text-[#12263A] dark:text-[#E4E4E4] text-xs font-bold tracking-wide mb-6 shadow-xs">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#697A21]" />
             <span>AI-Assisted Reminiscence & Cognitive Care • North-East India</span>
           </div>
 
           {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#162620] dark:text-[#FAF7F2] tracking-tight leading-[1.12]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#12263A] dark:text-[#E4E4E4] tracking-tight leading-[1.12]">
             Dignified Memory Care{' '}
-            <span className="text-[#B3532D] block sm:inline">Rooted in Heritage.</span>
+            <span className="text-[#697A21] block sm:inline">Rooted in Heritage.</span>
           </h1>
 
-          <p className="mt-5 text-base sm:text-lg text-[#4A5852] dark:text-[#9DB0A7] leading-relaxed max-w-2xl mx-auto font-normal">
+          <p className="mt-5 text-base sm:text-lg text-[#767575] dark:text-[#C5D8D1] leading-relaxed max-w-2xl mx-auto font-medium">
             Gentle, clinically grounded cognitive exercises and voice companionship for elders with mild cognitive impairment — tailored in Assamese, Hindi, and regional traditions.
           </p>
 
@@ -63,9 +63,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <button
               id="btn-hero-hear-welcome"
               onClick={handleHearWelcome}
-              className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white dark:bg-[#1A2620] border border-[#1C382B]/15 dark:border-white/15 text-[#1C382B] dark:text-[#FAF7F2] text-xs sm:text-sm font-semibold hover:border-[#C99738] transition-colors cursor-pointer shadow-xs focus-accessible"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white dark:bg-[#12263A] border border-[#B1B1B1] dark:border-[#767575] text-[#12263A] dark:text-[#E4E4E4] text-xs sm:text-sm font-extrabold hover:border-[#697A21] transition-colors cursor-pointer shadow-xs focus-accessible"
             >
-              <Volume2 className={`w-4 h-4 text-[#C99738] ${isPlayingAudio ? 'animate-pulse' : ''}`} />
+              <Volume2 className={`w-4 h-4 text-[#697A21] ${isPlayingAudio ? 'animate-pulse' : ''}`} />
               <span>{isPlayingAudio ? 'Speaking in your language...' : 'Listen to Spoken Welcome in Local Language'}</span>
             </button>
           </div>
@@ -86,20 +86,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div>
               <div className="flex items-center justify-between mb-4">
                 <span className="text-3xl">👴🏽</span>
-                <span className="px-2.5 py-1 rounded-md bg-[#C99738]/20 text-[#C99738] text-[11px] font-bold tracking-wider uppercase">
+                <span className="px-3 py-1 rounded-lg bg-[#697A21] text-white text-[11px] font-black tracking-wider uppercase">
                   Senior Friendly
                 </span>
               </div>
               <h2 className="text-2xl font-bold text-white mb-2 leading-snug">
                 Enter Elder Courtyard
               </h2>
-              <p className="text-sm text-[#D1DCD6] leading-relaxed mb-6 font-normal">
+              <p className="text-sm text-[#C5D8D1] leading-relaxed mb-6 font-medium">
                 Calibrated low-strain memory recall, family photo album exploration, gentle tea garden focus games, and voice chats with Oja.
               </p>
             </div>
-            <div className="flex items-center gap-2 text-[#C99738] font-bold text-sm pt-4 border-t border-white/10 group-hover:gap-3 transition-all">
+            <div className="flex items-center gap-2 text-[#C5D8D1] font-extrabold text-sm pt-4 border-t border-white/10 group-hover:gap-3 transition-all">
               <span>Start gentle session</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 text-[#697A21]" />
             </div>
           </button>
 
@@ -110,43 +110,43 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               soundSynth.playSoftClick();
               onNavigate('caregiver-portal');
             }}
-            className="group card-editorial p-7 text-left flex flex-col justify-between cursor-pointer focus-accessible bg-white dark:bg-[#1A2620] border-[#1C382B]/15 hover:border-[#B3532D]"
+            className="group card-editorial p-7 text-left flex flex-col justify-between cursor-pointer focus-accessible bg-white dark:bg-[#12263A] border-[#B1B1B1] hover:border-[#697A21]"
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <div className="w-9 h-9 rounded-lg bg-[#B3532D]/10 flex items-center justify-center text-[#B3532D]">
-                  <Stethoscope className="w-5 h-5" />
+                <div className="w-10 h-10 rounded-xl bg-[#12263A]/10 flex items-center justify-center text-[#12263A] dark:text-[#C5D8D1]">
+                  <Stethoscope className="w-5 h-5 text-[#697A21]" />
                 </div>
-                <span className="px-2.5 py-1 rounded-md bg-[#B3532D]/10 text-[#B3532D] text-[11px] font-bold tracking-wider uppercase">
+                <span className="px-3 py-1 rounded-lg bg-[#12263A] text-[#C5D8D1] text-[11px] font-black tracking-wider uppercase">
                   Caregiver Portal
                 </span>
               </div>
-              <h2 className="text-2xl font-bold text-[#162620] dark:text-[#FAF7F2] mb-2 leading-snug">
+              <h2 className="text-2xl font-bold text-[#12263A] dark:text-[#E4E4E4] mb-2 leading-snug">
                 Caregiver & Clinical Suite
               </h2>
-              <p className="text-sm text-[#4A5852] dark:text-[#9DB0A7] leading-relaxed mb-6 font-normal">
+              <p className="text-sm text-[#767575] dark:text-[#C5D8D1] leading-relaxed mb-6 font-medium">
                 Structured 7-day cognitive trend charts, daily medication rhythms, subtle decline alerts, and hearing/vision accessibility calibration.
               </p>
             </div>
-            <div className="flex items-center gap-2 text-[#B3532D] font-bold text-sm pt-4 border-t border-[#1C382B]/08 dark:border-white/10 group-hover:gap-3 transition-all">
+            <div className="flex items-center gap-2 text-[#12263A] dark:text-[#C5D8D1] font-extrabold text-sm pt-4 border-t border-[#B1B1B1] dark:border-white/10 group-hover:gap-3 transition-all">
               <span>Access telemetry dashboard</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 text-[#697A21]" />
             </div>
           </button>
         </div>
 
         {/* ── CLINICAL ASSURANCE BADGES ── */}
-        <div className="mt-10 pt-6 border-t border-[#1C382B]/08 dark:border-white/10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-[#4A5852] dark:text-[#9DB0A7] font-medium">
+        <div className="mt-10 pt-6 border-t border-[#B1B1B1] dark:border-[#767575] flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-[#767575] dark:text-[#C5D8D1] font-bold">
           <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-[#1C382B] dark:text-[#C99738]" />
+            <ShieldCheck className="w-4 h-4 text-[#697A21]" />
             <span>DPDP Act 2023 Compliant & Local Vault</span>
           </div>
           <div className="flex items-center gap-2">
-            <Globe2 className="w-4 h-4 text-[#4D7E78]" />
+            <Globe2 className="w-4 h-4 text-[#12263A] dark:text-[#C5D8D1]" />
             <span>Assamese, Hindi & Regional Dialects</span>
           </div>
           <div className="flex items-center gap-2">
-            <Cpu className="w-4 h-4 text-[#B3532D]" />
+            <Cpu className="w-4 h-4 text-[#697A21]" />
             <span>Offline-First Synced Architecture</span>
           </div>
         </div>
@@ -160,9 +160,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 soundSynth.playGentleChime();
                 onOpenDemoStory();
               }}
-              className="inline-flex items-center gap-2 text-xs font-semibold text-[#1C382B] dark:text-[#FAF7F2] hover:text-[#B3532D] transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 text-xs font-bold text-[#12263A] dark:text-[#E4E4E4] hover:text-[#697A21] transition-colors cursor-pointer"
             >
-              <Play className="w-3.5 h-3.5 text-[#B3532D]" />
+              <Play className="w-3.5 h-3.5 text-[#697A21]" />
               <span>Preview Sample Patient Walkthrough: Uncle Dipankar (Guwahati)</span>
             </button>
           </div>

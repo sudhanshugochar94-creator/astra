@@ -127,8 +127,8 @@ function AppContent() {
         accessibilitySettings.highContrast
           ? 'bg-black text-amber-300'
           : accessibilitySettings.darkMode
-          ? 'bg-[#111A15] text-[#FAF7F2]'
-          : 'bg-[#FAF7F2] text-[#162620]'
+          ? 'bg-[#0B1927] text-[#E4E4E4]'
+          : 'bg-[#E4E4E4] text-[#12263A]'
       }`}
     >
       {/* 1. Accessibility Controls Bar */}
@@ -174,7 +174,7 @@ function AppContent() {
             />
             
             {/* Embedded Interactive Memory House Teaser */}
-            <div className="py-16 bg-[#FFFFFF] border-y border-[#2D4739]/10">
+            <div className="py-16 bg-[#FFFFFF] border-y border-[#B1B1B1]">
               <MemoryHouse
                 currentLanguage={currentLanguage}
                 onNavigate={setActiveView}
@@ -190,7 +190,7 @@ function AppContent() {
             </div>
 
             {/* Embedded Interactive Memory Garden Teaser */}
-            <div className="py-16 bg-[#FDFBF7]">
+            <div className="py-16 bg-[#C5D8D1]/20">
               <MemoryGarden currentLanguage={currentLanguage} />
             </div>
 

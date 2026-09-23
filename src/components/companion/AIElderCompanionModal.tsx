@@ -36,7 +36,7 @@ export const AIElderCompanionModal: React.FC<AIElderCompanionModalProps> = ({
   const [messages, setMessages] = useState<Array<{ sender: 'user' | 'companion'; text: string; time: string }>>([
     {
       sender: 'companion',
-      text: 'Good morning, my dear friend. The morning breeze over the hills brings peace. Let us have a gentle sip of warm tea and talk.',
+      text: 'WELCOME TO ASTRAA! Good morning, my dear friend. The morning breeze over the hills brings peace. Let us have a gentle sip of warm tea and talk.',
       time: 'Just now'
     }
   ]);
@@ -54,11 +54,11 @@ export const AIElderCompanionModal: React.FC<AIElderCompanionModalProps> = ({
         setMessages([
           {
             sender: 'companion',
-            text: `${welcome} — I am sitting right here with you. How is your heart and mind feeling today?`,
+            text: `WELCOME TO ASTRAA! ${welcome} — I am sitting right here with you. How is your heart and mind feeling today?`,
             time: 'Just now'
           }
         ]);
-        speechEngine.speak(`${welcome}. Welcome to our peaceful courtyard.`, {
+        speechEngine.speak(`WELCOME TO ASTRAA! ${welcome}. Welcome to ASTRA.`, {
           language: currentLanguage,
           onEnd: () => setIsSpeaking(false)
         });

@@ -98,7 +98,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({
                 <span className="text-3xl">🌿</span>
               </div>
               <div className="text-left">
-                <h1 className="text-2xl font-extrabold font-heading text-[#1E3A2F] tracking-tight">Vanika</h1>
+                <h1 className="text-2xl font-extrabold font-heading text-[#1E3A2F] tracking-tight">ASTRA</h1>
                 <p className="text-xs text-[#52635D] font-semibold">Cognitive Wellness</p>
               </div>
             </div>

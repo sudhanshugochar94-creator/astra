@@ -102,7 +102,7 @@ export const PatientAppView: React.FC<PatientAppViewProps> = ({
   const handleSpeakGreeting = () => {
     soundSynth.playGentleChime();
     VoiceAssistant.speak(
-      `Good morning ${elderDisplayName}! Welcome to your peaceful courtyard. Which activity would you like to enjoy together today?`,
+      `WELCOME TO ASTRAA! Good morning ${elderDisplayName}! Welcome to your peaceful courtyard in ASTRA. Which activity would you like to enjoy together today?`,
       currentLanguage,
       'slow'
     );

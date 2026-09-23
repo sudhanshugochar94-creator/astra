@@ -248,7 +248,7 @@ export const BanyanFeatureTree: React.FC<BanyanFeatureTreeProps> = ({
               onOpenCompanion();
             }}
             className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br from-[#D4AF37] via-[#C66B44] to-[#1E3A2F] p-1 shadow-[0_0_35px_rgba(212,175,55,0.7)] hover:scale-110 transition-all cursor-pointer group relative border-2 border-[#D4AF37]"
-            title="Vanika Core AI Sanctuary — Banyan Trunk"
+            title="ASTRA Core AI Sanctuary — Banyan Trunk"
           >
             <div className="w-full h-full rounded-full bg-[#1E3A2F] flex flex-col items-center justify-center text-center p-2 border-2 border-[#D4AF37]">
               {/* Tea Leaf & Sun SVG Emblem */}
@@ -259,7 +259,7 @@ export const BanyanFeatureTree: React.FC<BanyanFeatureTreeProps> = ({
                 <circle cx="23" cy="8" r="2.5" fill="#D4AF37" stroke="none" />
               </svg>
               <span className="text-xs font-black text-[#D4AF37] tracking-widest uppercase mt-1 font-heading">
-                VANIKA
+                ASTRA
               </span>
             </div>
             {/* Outer Pulsing Aura */}

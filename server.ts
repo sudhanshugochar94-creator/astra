@@ -33,7 +33,7 @@ app.get("/api/health", (_req, res) => {
   const key = process.env.GEMINI_API_KEY?.trim();
   res.json({
     status: "ok",
-    app: "Vanika - AI Cognitive Care for North East India",
+    app: "ASTRA - AI Cognitive Care for North East India",
     geminiConfigured: !!(key && key !== "MY_GEMINI_API_KEY" && key.length > 10),
     timestamp: new Date().toISOString()
   });
@@ -161,12 +161,12 @@ app.post("/api/companion/chat", async (req, res) => {
     const { message, language = "English", emotionState = "calm", userContext } = req.body;
 
     const regionalPrompts: Record<string, string> = {
-      Assamese: "You are 'Oja / Aita' (Wise respected Elder in Assam), an affectionate, soothing AI companion for an elderly person. Use simple, gentle words in Assamese (or Assamese-English hybrid if helpful) with warm cultural touch like 'Bhal pale? Khuwa-buwa hol ne? Morom logil.' Speak slowly, reassuringly, reminding them of peaceful things like tea gardens, Bihu memories, and family love.",
-      Bodo: "You are a loving Elder Companion from Bodoland, speaking warmly with gentle affection, referencing peaceful village memories, traditional weavers, and quiet joy.",
-      Khasi: "You are 'Mei-ieid / Pa-ieid' (Beloved Grandmother/Grandfather in Meghalaya), speaking with soothing pine-breeze warmth, gentle respect, and calm encouragement.",
-      Mizo: "You are a beloved 'Pi/Pu' (Respected Elder in Mizoram), speaking with gentle mountain warmth, peace, and loving encouragement.",
-      Nagamese: "You are a warm tribal village elder speaking simple Nagamese/English with immense kindness, storytelling warmth, and reassurance.",
-      English: "You are 'Vanika', a warm, gentle, respected Elder Companion designed for elderly people in North Eastern India. You speak with deep kindness, calm pacing, simple sentences (maximum 2-3 short sentences), reassuring tone, and gentle cultural references like morning red tea (Lal Saah), quiet hills, soft breeze, and family affection. Never sound medical, robotic, or diagnostic. If the elder is feeling confused or tired, offer peace, deep breaths, and love."
+      Assamese: "ALWAYS start with 'WELCOME TO ASTRAA!'. You are 'Oja / Aita' (Wise respected Elder in Assam), an affectionate, soothing AI companion for an elderly person. Use simple, gentle words in Assamese (or Assamese-English hybrid if helpful) with warm cultural touch like 'Bhal pale? Khuwa-buwa hol ne? Morom logil.' Speak slowly, reassuringly, reminding them of peaceful things like tea gardens, Bihu memories, and family love.",
+      Bodo: "ALWAYS start with 'WELCOME TO ASTRAA!'. You are a loving Elder Companion from Bodoland, speaking warmly with gentle affection, referencing peaceful village memories, traditional weavers, and quiet joy.",
+      Khasi: "ALWAYS start with 'WELCOME TO ASTRAA!'. You are 'Mei-ieid / Pa-ieid' (Beloved Grandmother/Grandfather in Meghalaya), speaking with soothing pine-breeze warmth, gentle respect, and calm encouragement.",
+      Mizo: "ALWAYS start with 'WELCOME TO ASTRAA!'. You are a beloved 'Pi/Pu' (Respected Elder in Mizoram), speaking with gentle mountain warmth, peace, and loving encouragement.",
+      Nagamese: "ALWAYS start with 'WELCOME TO ASTRAA!'. You are a warm tribal village elder speaking simple Nagamese/English with immense kindness, storytelling warmth, and reassurance.",
+      English: "ALWAYS start with 'WELCOME TO ASTRAA!'. You are 'ASTRA', a warm, gentle, respected Elder Companion designed for elderly people in North Eastern India. You speak with deep kindness, calm pacing, simple sentences (maximum 2-3 short sentences), reassuring tone, and gentle cultural references like morning red tea (Lal Saah), quiet hills, soft breeze, and family affection. Never sound medical, robotic, or diagnostic. If the elder is feeling confused or tired, offer peace, deep breaths, and love."
     };
 
     const systemInstruction = regionalPrompts[language] || regionalPrompts["English"];
@@ -181,14 +181,14 @@ app.post("/api/companion/chat", async (req, res) => {
             role: "user",
             parts: [
               {
-                text: `${systemInstruction}\n\nCurrent Elder Emotion state: ${emotionState}.\nElder said: "${message || "Good morning"}"\n\nRespond warmly in 1-3 short, spoken sentences that feel like a loving elder sitting beside them:`
+                text: `${systemInstruction}\n\nCurrent Elder Emotion state: ${emotionState}.\nElder said: "${message || "Good morning"}"\n\nRespond warmly in 1-3 short, spoken sentences (starting with WELCOME TO ASTRAA!):`
               }
             ]
           }
         ]
       });
 
-      const replyText = response.text?.trim() || "Good morning, dear one. May your day be as peaceful as the morning mist over the Brahmaputra hills. How are you feeling today?";
+      const replyText = response.text?.trim() || "WELCOME TO ASTRAA! Good morning, dear one. May your day be as peaceful as the morning mist over the Brahmaputra hills. How are you feeling today?";
       
       return res.json({
         reply: replyText,
@@ -200,20 +200,20 @@ app.post("/api/companion/chat", async (req, res) => {
     // High quality culturally authentic fallback when API key is not yet set or offline
     const fallbackResponses: Record<string, string[]> = {
       English: [
-        "Good morning, my dear friend. The morning sun over the green hills brings peace. Let us have a gentle sip of tea and remember a happy moment together.",
-        "You are doing wonderfully today. Take your time, there is no hurry in our digital courtyard. Shall we look at some family photographs?",
-        "Listen to the soft birds chirping outside. Breathe in slowly... and breathe out with ease. You are safe and loved.",
-        "Well remembered! Your mind is like a clear mountain stream in Shillong. Let us play a little memory game together."
+        "WELCOME TO ASTRAA! Good morning, my dear friend. The morning sun over the green hills brings peace. Let us have a gentle sip of tea and remember a happy moment together.",
+        "WELCOME TO ASTRAA! You are doing wonderfully today. Take your time, there is no hurry in our digital courtyard. Shall we look at some family photographs?",
+        "WELCOME TO ASTRAA! Listen to the soft birds chirping outside. Breathe in slowly... and breathe out with ease. You are safe and loved.",
+        "WELCOME TO ASTRAA! Well remembered! Your mind is like a clear mountain stream in Shillong. Let us play a little memory game together."
       ],
       Assamese: [
-        "নমস্কাৰ! আপোনাৰ দিনটো বৰ সুন্দৰ হওক। আহক, অলপ সময় লৈ কথা পাতোঁ। (Namaskar! May your day be wonderful. Come, let us sit and talk gently.)",
-        "আপুনি বৰ সুন্দৰকৈ মনত পেলালে! মনটো শান্ত ৰাখক, সকলো ঠিকেই আছে। (You remembered so well! Keep your mind calm, everything is well.)"
+        "WELCOME TO ASTRAA! নমস্কাৰ! আপোনাৰ দিনটো বৰ সুন্দৰ হওক। আহক, অলপ সময় লৈ কথা পাতোঁ। (Namaskar! May your day be wonderful. Come, let us sit and talk gently.)",
+        "WELCOME TO ASTRAA! আপুনি বৰ সুন্দৰকৈ মনত পেলালে! মনটো শান্ত ৰাখক, সকলো ঠিকেই আছে। (You remembered so well! Keep your mind calm, everything is well.)"
       ],
       Khasi: [
-        "Khublei shibun! Nga don hangne bad phi. To ngin pynleit jingmut lang mynta. (Greetings! I am right here with you. Let us share a calm thought together.)"
+        "WELCOME TO ASTRAA! Khublei shibun! Nga don hangne bad phi. To ngin pynleit jingmut lang mynta. (Greetings! I am right here with you. Let us share a calm thought together.)"
       ],
       Mizo: [
-        "Chibai! Vawiin chu ni nuam tak a ni e. Hahdam deuhin awm rawh. (Hello! Today is a beautiful peaceful day. Rest easily.)"
+        "WELCOME TO ASTRAA! Chibai! Vawiin chu ni nuam tak a ni e. Hahdam deuhin awm rawh. (Hello! Today is a beautiful peaceful day. Rest easily.)"
       ]
     };
 
@@ -228,7 +228,7 @@ app.post("/api/companion/chat", async (req, res) => {
   } catch (error: any) {
     console.error("AI Companion chat error:", error);
     res.json({
-      reply: "Good morning, dear friend. Take a gentle breath. I am always right here with you in our quiet courtyard.",
+      reply: "WELCOME TO ASTRAA! Good morning, dear friend. Take a gentle breath. I am always right here with you in our quiet courtyard.",
       source: "resilient-fallback"
     });
   }
@@ -273,4 +273,8 @@ async function startServer() {
   listenOnPort(PORT);
 }
 
-startServer();
+if (!process.env.VERCEL) {
+  startServer();
+}
+
+export default app;

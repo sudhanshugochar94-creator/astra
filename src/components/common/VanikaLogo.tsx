@@ -25,17 +25,17 @@ export const VanikaLogo: React.FC<VanikaLogoProps> = ({
     >
       {/* Unique Organic Leaf & Sun Tea emblem */}
       <div
-        className={`rounded-2xl bg-gradient-to-br from-[#1E3A2F] to-[#2D4739] text-[#FDFBF7] flex items-center justify-center border-2 border-[#D4AF37] shadow-md group-hover:scale-105 transition-all relative overflow-hidden shrink-0 ${
+        className={`rounded-2xl bg-gradient-to-br from-[#12263A] to-[#1D3A56] text-[#E4E4E4] flex items-center justify-center border-2 border-[#697A21] shadow-md group-hover:scale-105 transition-all relative overflow-hidden shrink-0 ${
           isSm ? 'w-9 h-9' : isLg ? 'w-14 h-14' : 'w-11 h-11'
         }`}
       >
         {/* Soft Sun Glow */}
-        <div className="absolute -top-1 -right-1 w-5 h-5 bg-[#D4AF37]/30 rounded-full blur-xs" />
+        <div className="absolute -top-1 -right-1 w-5 h-5 bg-[#697A21]/30 rounded-full blur-xs" />
         
         {/* Custom SVG Tea Leaf & Sacred Banyan Emblem */}
         <svg
           viewBox="0 0 32 32"
-          className={`${isSm ? 'w-5 h-5' : isLg ? 'w-8 h-8' : 'w-6 h-6'} text-[#D4AF37] transition-transform group-hover:rotate-6`}
+          className={`${isSm ? 'w-5 h-5' : isLg ? 'w-8 h-8' : 'w-6 h-6'} text-[#C5D8D1] transition-transform group-hover:rotate-6`}
           fill="none"
           stroke="currentColor"
           strokeWidth="2.2"
@@ -43,13 +43,13 @@ export const VanikaLogo: React.FC<VanikaLogoProps> = ({
           strokeLinejoin="round"
         >
           {/* Outer Leaf Curve */}
-          <path d="M16 4C10 8 6 15 8 23C13 25 21 24 25 18C28 12 24 6 16 4Z" fill="#D4AF37" fillOpacity="0.35" stroke="#D4AF37" />
+          <path d="M16 4C10 8 6 15 8 23C13 25 21 24 25 18C28 12 24 6 16 4Z" fill="#C5D8D1" fillOpacity="0.45" stroke="#697A21" />
           {/* Leaf Vein */}
-          <path d="M11 20C14 16 16 12 16 4" stroke="#FDFBF7" strokeWidth="1.8" />
-          <path d="M14 14L18 16" stroke="#FDFBF7" strokeWidth="1.5" />
-          <path d="M12 18L15 19.5" stroke="#FDFBF7" strokeWidth="1.5" />
-          {/* Golden Sun Dot */}
-          <circle cx="23" cy="8" r="2.5" fill="#D4AF37" stroke="none" />
+          <path d="M11 20C14 16 16 12 16 4" stroke="#12263A" strokeWidth="1.8" />
+          <path d="M14 14L18 16" stroke="#12263A" strokeWidth="1.5" />
+          <path d="M12 18L15 19.5" stroke="#12263A" strokeWidth="1.5" />
+          {/* Olive Sun Dot */}
+          <circle cx="23" cy="8" r="2.5" fill="#697A21" stroke="none" />
         </svg>
       </div>
 
@@ -57,19 +57,19 @@ export const VanikaLogo: React.FC<VanikaLogoProps> = ({
       <div className="flex flex-col text-left justify-center">
         <div className="flex items-center gap-0.5">
           <span
-            className={`font-heading font-extrabold tracking-tight text-brand-dark dark:text-[#FDFBF7] ${
+            className={`font-heading font-extrabold tracking-tight text-[#12263A] dark:text-[#E4E4E4] ${
               isSm ? 'text-xl' : isLg ? 'text-3xl' : 'text-2xl'
             }`}
           >
-            Vanika
-            <span className="text-brand-terracotta font-black inline-block ml-0.5">
+            ASTRA
+            <span className="text-[#697A21] font-black inline-block ml-0.5">
               .
             </span>
           </span>
         </div>
 
         {showTagline && (
-          <p className="text-[10px] sm:text-xs font-black text-brand-forest dark:text-[#EAE2D2] tracking-wider whitespace-nowrap block mt-0.5">
+          <p className="text-[10px] sm:text-xs font-black text-[#697A21] dark:text-[#C5D8D1] tracking-wider whitespace-nowrap block mt-0.5">
             Remember. Play. Connect.
           </p>
         )}
