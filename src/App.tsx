@@ -52,7 +52,7 @@ import { CultureDeepDiveView } from './components/views/CultureDeepDiveView';
 import { PrivacyPolicyView } from './components/views/PrivacyPolicyView';
 
 function AppContent() {
-  const [activeView, setActiveView] = useState<ActiveView>('home');
+  const [activeView, setActiveView] = useState<ActiveView>('patient-app');
   const [isCompanionOpen, setIsCompanionOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isDemoOpen, setIsDemoOpen] = useState(false);
