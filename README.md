@@ -190,9 +190,9 @@ SIH/
 
 ---
 
-## 👥 Team Aquaregia (SIH 2026)
+## 👥 Team Astraa2.0 (SIH 2026)
 
-* **Project:** Vanika Cognitive Platform
+* **Project:** Astraa Cognitive Platform
 * **Problem Statement:** SIH1724
 * **Submitted to:** Smart India Hackathon 2026
 
