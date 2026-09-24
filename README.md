@@ -1,4 +1,4 @@
-# 🧠 VANIKA: AI-Based Cognitive Gaming & Memory Assistance Platform
+# 🧠 Astraa: AI-Based Cognitive Gaming & Memory Assistance Platform
 > **Smart India Hackathon 2026 (SIH 2026)**  
 > **Problem Statement ID:** SIH1724  
 > **Problem Statement Title:** AI-Based Cognitive Gaming and Memory Assistance Platform for Elderly Dementia Patients  
